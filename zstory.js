@@ -8,6 +8,8 @@ const firstRoomIntroTwo = "The door creaks open, revealing a room lost to time. 
 // Intro 3: Looming Darkness
 const firstRoomIntroThree =  "A cold draft flows through the door as you step into the room. Barely visible in the dimness, an assortment of objects lies scattered across the floor, some broken, others curiously arranged. Flickering lights cast long shadows, revealing an intricate puzzle in the middle of the room. The silence is punctuated by distant, unidentifiable sounds, as if the room itself is groaning under a hidden weight. You feel a sense of urgency—youre not sure why, but it feels like this room holds something more than just a puzzle."
 
+//
+
 // LEFT ROOM - LAB AND EXPERIMENT ROOM
 // Intro 1: Cold and Clinical Horror
 const leftRoomDescOne = "You push open the heavy door to the left and are greeted by the stark brightness of a laboratory filled with cold metal and gleaming glass. A sickly, antiseptic odor lingers in the air, mixing with something else—something metallic and dark. Tables are cluttered with strange instruments, their cruel designs hinting at purposes best left unknown. Against one wall, rusty chains dangle ominously, as if waiting for the next unwilling occupant. In the center of the room, a puzzle mechanism glints with fresh, polished edges, standing in disturbing contrast to the decay around it."
