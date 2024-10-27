@@ -21,3 +21,7 @@ const battleVictory = "Standing over the experiment that has now stopped moving 
 
 //Monster wins
 const battleDefeat = "Apparently its not wise to fight against a monster you have come across in this unknown place. Surely there were better options than fighting a 'thing' with a rusty pipe. Did you think you were in a video game or something? As you lay there clinging to life, you start to fade as the monster takes the key from you and goes back to his happy little corner."
+
+//Leaving w/ the key
+const dungeonGoingBack = "With the ordeal behind you and your new found key, you decide to return to the first room. This key must fit into the pedastol you saw earlier."
+

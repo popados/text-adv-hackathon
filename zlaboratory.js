@@ -22,7 +22,11 @@ let promptOne = "Which button do you press first?"
 let promptTwo = "Which button do you press second?"
 let promptThree = "Which button do you press third?"
 let buttonSubmission = [promptOne + promptTwo + promptThree]
-
+if (buttonSubmission === correctButtonOrder) {
+    "You were able to open the cabinet with the correct order, Inside you find an Ivory key with an intricate design. Beside it there is a note that reads 'If you play with the toys gently they will give you what they want, otherwise you are in for a surprise'. The note looks as if it was hastily scrawled as if a last lesson to those who need it."
+} else {
+    "Nothing happens, it would seem you have the wrong connection."
+}
 
 
 // PUZZLE 3: LIGHT ACTIVATION PUZZLE 
