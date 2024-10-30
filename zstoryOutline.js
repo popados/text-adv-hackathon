@@ -1,26 +1,28 @@
-//The user wakes up in a room walking into the first room
-random = Math.floor(Math.random() * 3) + 1;
-    //selects which story to tell from scenes.js
+
+
+// //The user wakes up in a room walking into the first room
+let ENTRYHALL = true;
+let random = Math.floor(Math.random() * 3) + 1;
     if (random === 1) {
-        console.log(firstRoomIntroOne);
+        console.log(ENTRYHALL.eerieSilence);
     } else if (random === 2) {
-        console.log(firstRoomIntroTwo);
+        console.log(ENTRYHALL.forgottenMystery);
     } else {
-        console.log(firstRoomIntroThree);
+        console.log(ENTRYHALL.loomingDarkness);
     }
-    //creating a selector to decide which room to go to
+     //creating a selector to decide which room to go to
     //example only based on left room first, user will be able to choose.
 
     //user chooses to go to the left room
-    let leftRoom = true;
-    if (leftRoom) {
-        random = Math.floor(Math.random() * 3) + 1;
+    let LABORATORY = true;
+    if (LABORATORY) {
+        let random = Math.floor(Math.random() * 3) + 1;
         if (random === 1) {
-            console.log(leftRoomDescOne);
+            console.log(LABORATORY.coldClinicalHorror);
         } else if (random === 2) {
-            console.log(leftRoomDescTwo);
+            console.log(LABORATORY.macabreChaotic);
         } else {
-            console.log(leftRoomDescThree);
+            console.log(LABORATORY.shadowsOfSuffering);
         }
     }
     //after the scenario is read tehy are given a choice of four options

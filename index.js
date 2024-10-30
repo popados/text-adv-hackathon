@@ -1,3 +1,4 @@
+import { getRandomNumber } from './random.js';
 
 let readline = require('readline');
 
