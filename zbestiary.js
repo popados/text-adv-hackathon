@@ -1,5 +1,5 @@
 // Define each monster as an object with ASCII art, name, description, and hint
-const monsters = [
+export const monsters = [
  {
         name: "Sloth (Evil Bear)",
         ascii: `
