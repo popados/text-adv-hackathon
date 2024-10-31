@@ -1,26 +1,36 @@
-//The user wakes up in a room walking into the first room
-random = Math.floor(Math.random() * 3) + 1;
-    //selects which story to tell from scenes.js
+import {ENTRYHALL} from "./zscenes.js";
+import {LABORATORY} from "./zscenes.js";
+import {DUNGEON} from "./zscenes.js";
+
+//all functions will be called at bottom of the page
+
+// //The user wakes up in a room walking into the first room
+let startingRoom = true;
+
+
+ console.log(ENTRYHALL);
+let random = Math.floor(Math.random() * 3);
     if (random === 1) {
-        console.log(firstRoomIntroOne);
+        console.log(ENTRYHALL[0].firstSentence);
     } else if (random === 2) {
-        console.log(firstRoomIntroTwo);
+        console.log(ENTRYHALL[1].firstSentence);
     } else {
-        console.log(firstRoomIntroThree);
+        console.log(ENTRYHALL[2].firstSentence);
     }
-    //creating a selector to decide which room to go to
+    console.log(ENTRYHALL[random].firstSentence);
+     //creating a selector to decide which room to go to
     //example only based on left room first, user will be able to choose.
 
     //user chooses to go to the left room
-    let leftRoom = true;
-    if (leftRoom) {
-        random = Math.floor(Math.random() * 3) + 1;
+    let enterLab = true;
+    if (enterLab) {
+        let random = Math.floor(Math.random() * 3) + 1;
         if (random === 1) {
-            console.log(leftRoomDescOne);
+            console.log(LABORATORY.coldClinicalHorror.firstSentence);
         } else if (random === 2) {
-            console.log(leftRoomDescTwo);
+            console.log(LABORATORY.macabreChaotic.firstSentence);
         } else {
-            console.log(leftRoomDescThree);
+            console.log(LABORATORY.shadowsOfSuffering.firstSentence);
         }
     }
     //after the scenario is read tehy are given a choice of four options
@@ -28,9 +38,31 @@ random = Math.floor(Math.random() * 3) + 1;
     //2. look around
     //3. go back
     //4. go forward
+    function selection(command) {
+        let response = ' ';
+        switch (command) {
+            case 'Hide':
+                response = 'You hide in the shadows, waiting for the danger to pass.';
+                break;
+            case 'look around':
+                response = 'You look around the room, searching for clues.';
+                break;
+            case 'go back':
+                response = 'You decide to go back to the previous room.';
+                break;
+            case 'go forward':
+                response = 'You move forward, ready to face whatever lies ahead.';
+                break;
+            default:
+                response = 'Please enter a valid command.';
+        }
+        return response;
+    }
 
     //user will have to solve the puzzle based on the one seleceted form the randomizer
+    
     //if the user solves the puzzle they will be able to find the Ivory key
+    
     //if the user fails to solve the puzzle they will have to try again
 
     //if the user solves the puzzle they will be able to go back to the first room
@@ -54,3 +86,18 @@ random = Math.floor(Math.random() * 3) + 1;
     // if they are able to find a note before finding the monster tehy will be given a choice to sneakily take the key or aggressively take the key.
 
     // if they sneak then they will be able to get out of the room without fighting the monster.
+
+    //finally they will be able to go back to the first room and insert the Ebony key into the pedastol and unlock the second lock.
+
+    //as they open the door they will have one last encounter that is randomized from the bestiary
+
+    //they will have a choice of 3 options, fight, run or hide.
+    prompt("You have entered the final room, you see a monster in front of you. What do you do? Fight, Run, or Hide?");
+    selection(prompt);
+
+    //insert functions below here: ___________
+
+    function getRandomNumber() {
+       const randomChoice = Math.floor(math.random() * Array.length);
+       return randomChoice;
+    }
