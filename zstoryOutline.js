@@ -14,7 +14,7 @@ let startingRoom = true;
 
 
 // console.log("entryhall: ", ENTRYHALL); 
-const randomNum = getRandomNumber(); 
+let randomNum = getRandomNumber(); 
     console.log("randomNum: ", randomNum)
     console.log("first sentence: ", ENTRYHALL[getRandomNumber()].firstSentence);
      //creating a selector to decide which room to go to
@@ -60,6 +60,7 @@ console.log(laboratoryPuzzles[getRandomNumber()].Objective);
     console.log("You have failed to solve the puzzle, try again.");
     console.log(laboratoryPuzzles[getRandomNumber()].Hint);
     //if the user solves the puzzle they will be able to go back to the first room
+
     // insert code for user going back to first room --
 
     //user selects "go back"
@@ -98,3 +99,29 @@ if (finalRoom) {
        const randomChoice = Math.floor(Math.random() * 3);
        return randomChoice;
     }
+
+  import inquirer from 'inquirer';
+
+// Set up the solution variable for comparison
+const solution = 'ABC'; // Adjust this to whatever sequence you need
+
+// Function to prompt the user three times and combine responses
+async function askSequence() {
+  let combinedInput = '';
+  for (let i = 1; i <= 3; i++) {
+    const answer = await inquirer.prompt([
+      {
+        type: 'input',
+        name: 'button',
+        message: "'Button ${i}: Which button will you press?`",
+      },
+    ]);
+    combinedInput += answer.button;
+  }
+  if (combinedInput === solution) {
+    console.log('\nCorrect sequence! You solved the puzzle!');
+  } else {
+    console.log('\nIncorrect sequence. Try again.');
+  }
+}
+askSequence();
